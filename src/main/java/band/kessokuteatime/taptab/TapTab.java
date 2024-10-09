@@ -59,7 +59,8 @@ public class TapTab implements ModInitializer {
 			if (client.player == null) return;
 
 			if (keyOrDefault(CYCLE, client.options.playerListKey).wasPressed()) {
-				if (System.currentTimeMillis() - lastPressed < TAB_DELAY) {
+				// silly change for personal use only :p
+				// if (System.currentTimeMillis() - lastPressed < TAB_DELAY) {
 					boolean reverseModifier = keyOrDefault(REVERSE_MODIFIER, client.options.sneakKey).isPressed();
 					boolean slotModifier = SLOT_MODIFIER.isPressed();
 
@@ -71,7 +72,7 @@ public class TapTab implements ModInitializer {
 						if (reverseModifier) InventorySwapper.swapToPrevLine();
 						else InventorySwapper.swapToNextLine();
 					}
-				}
+				// }
 
 				lastPressed = System.currentTimeMillis();
 			}
